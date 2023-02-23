@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightgray;
+}
+
+
+
+
+
+.header{
+    height: 100px;
+    background-color: rgb(255, 188, 63);
+}
+.container{
+    height: 100%;
+    padding: 0px 0px 0px 100px;
+
+    display: flex;
+    align-items: center;
+}
+.container > *{
+    margin: 0px 10px 0px 0px;
+    font-size: 3rem;
+}
+
+
+
+.add-btn{
+    cursor: pointer;
+    
+    position: absolute;
+    top: 120px;
+    right: 100px;
+    
+    background-color: rgb(255, 188, 63);
+    padding: 10px 20px;
+    
+    border-radius: 20px;
+    box-shadow: -1px -1px 2px 2px rgb(236, 236, 236), 1px 1px 2px 2px gray;
+}
+.add-btn:hover{
+    color: white;
+}
+.add-btn span{
+    font-size: 1.5rem;
+}
+.add-btn span:first-child{
+    margin-right: 10px;
+}
+
+.save{
+    color: rgb(0, 174, 0);
+}
+.delete{
+    color: red;
+}
+
+
+
+.notes {
+    margin: 20px;
+    margin-top: 100px;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(25%, auto));
+    
+
+    
+}
+
+.note{
+    height: 300px;
+    margin: 10px;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    transition: 0.5s all;
+}
+.head{
+    height: 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    font-size: 1.5rem;
+
+    background-color: rgb(255, 188, 63);
+
+    padding: 0px 40px;
+}
+.note-name{
+    margin-right: auto;
+}
+.icon-box{
+    margin: 0px 10px;
+    cursor: pointer;
+}
+.icon-box:hover{
+    color: white;
+
+}
+
+.notes textarea{
+    resize: none;
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+    font-size: 1.5rem;
+    background-color: rgb(254, 209, 125);
+    outline: none;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 2px solid rgb(255, 188, 63);
+}
+.notes textarea:focus{
+    background-color: rgb(255, 223, 164);
+    
+}
+.notes textarea:disabled{
+    background-color: rgb(228, 228, 228);
+}
