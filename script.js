@@ -2,7 +2,8 @@ let saveNote = () => {
     let notes = document.querySelectorAll('.notes textarea');
     let data = []; //blank array for data save in an array
 
-    notes.forEach((note) => {
+
+    notes.forEach((note, index) => {
         data.push(note.value);
     });
 
@@ -18,18 +19,19 @@ let createNote = (text = '') => {
     newNote.classList.add('note'); //add class to new div
     newNote.insertAdjacentHTML('afterbegin', `
     <div class="head">
-    <div class="note-name"></div>
-    <div class="icon-box save">save
-    <i class="fa-solid fa-pen-to-square"></i>
-    </div>
+        <div class="note-name"></div>
+        <div class="icon-box save">save
+            <i class="fa-solid fa-pen-to-square"></i>
+        </div>
         <div class="icon-box delete">
-        <i class="fa-solid fa-trash"></i>
+            <i class="fa-solid fa-trash"></i>
         </div>
-        </div>
-        <textarea name="" id="">${text}</textarea>`);
+    </div>
+    <textarea name="" id="">${text}</textarea>`);
         
     let notes = document.querySelector('.notes');
-    notes.appendChild(newNote); //append newNote to notes
+    // notes.appendChild(newNote); //append newNote to notes
+    notes.insertAdjacentElement('afterbegin', newNote);
 
     newNote.querySelector('.delete').addEventListener('click', () => {
        newNote.remove(); 
